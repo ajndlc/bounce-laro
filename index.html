@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LARO</title>
+    <title>Catch the Ball Game</title>
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log('Service Worker Registered'))
+                .catch(error => console.log('Service Worker Registration Failed:', error));
+        }
+    </script>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #433541;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+            font-family: Arial, sans-serif;
+            background-color: #433541;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-.game-container {
-    text-align: center;
-}
+        .game-container {
+            text-align: center;
+        }
 
-#gameCanvas {
-    background-color: #d08c8c;
-    border: 2px solid #2e2a2a;
-}
+        #gameCanvas {
+            background-color: #d08c8c;
+            border: 2px solid #2e2a2a;
+        }
 
-#score {
-    font-size: 24px;
-    font-weight: bold;
-    color: #030303;
-}
+        #score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #030303;
+        }
     </style>
-
 </head>
 <body>
     <div class="game-container">
