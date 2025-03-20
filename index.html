@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LARO</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #433541;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    text-align: center;
+}
+
+#gameCanvas {
+    background-color: #d08c8c;
+    border: 2px solid #2e2a2a;
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #030303;
+}
+    </style>
+
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <p id="score">Score: 0</p>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
